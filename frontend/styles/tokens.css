@@ -1,0 +1,249 @@
+/* Daawa design tokens */
+:root {
+  /* Brand */
+  color-scheme: light;
+  --color-primary: oklch(50% 0.13 195);
+  --color-primary-light: oklch(62% 0.12 195);
+  --color-primary-muted: oklch(42% 0.09 195);
+  --color-primary-glow: oklch(50% 0.13 195 / 0.16);
+  --color-primary-foreground: oklch(98% 0.006 210);
+
+  /* Backgrounds */
+  --color-bg: oklch(97.5% 0.012 210);
+  --color-bg-elevated: oklch(99% 0.008 210);
+  --color-bg-card: oklch(99.4% 0.006 210);
+  --color-bg-input: oklch(96% 0.012 210);
+  --color-border: oklch(86% 0.022 215);
+  --color-border-focus: oklch(50% 0.13 195 / 0.5);
+
+  /* Text */
+  --color-text: oklch(22% 0.02 235);
+  --color-text-muted: oklch(48% 0.025 235);
+  --color-text-subtle: oklch(64% 0.022 235);
+
+  /* Urgency */
+  --color-critical: oklch(52% 0.21 25);
+  --color-critical-bg: oklch(52% 0.21 25 / 0.1);
+  --color-critical-border: oklch(52% 0.21 25 / 0.28);
+
+  --color-high: oklch(58% 0.16 45);
+  --color-high-bg: oklch(58% 0.16 45 / 0.12);
+  --color-high-border: oklch(58% 0.16 45 / 0.3);
+
+  --color-medium: oklch(62% 0.14 85);
+  --color-medium-bg: oklch(62% 0.14 85 / 0.13);
+  --color-medium-border: oklch(62% 0.14 85 / 0.32);
+
+  --color-low: oklch(51% 0.12 155);
+  --color-low-bg: oklch(51% 0.12 155 / 0.11);
+  --color-low-border: oklch(51% 0.12 155 / 0.28);
+
+  /* Semantic */
+  --color-success: oklch(55% 0.1 140);
+  --color-danger: var(--color-critical);
+
+  /* Spacing & sizing */
+  --gap-1: 4px;
+  --gap-2: 8px;
+  --gap-3: 12px;
+  --gap-4: 16px;
+  --gap-5: 24px;
+  --gap-6: 32px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --control-height: 44px;
+
+  /* Typography */
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-md: 17px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-short: 160ms;
+  --duration-medium: 280ms;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-primary: oklch(55% 0.15 195);
+  --color-primary-light: oklch(70% 0.12 195);
+  --color-primary-muted: oklch(40% 0.1 195);
+  --color-primary-glow: oklch(55% 0.15 195 / 0.2);
+  --color-primary-foreground: oklch(0.985 0 0);
+
+  --color-bg: oklch(12% 0.01 240);
+  --color-bg-elevated: oklch(16% 0.01 240);
+  --color-bg-card: oklch(18% 0.015 240);
+  --color-bg-input: oklch(14% 0.01 240);
+  --color-border: oklch(25% 0.01 240);
+  --color-border-focus: oklch(55% 0.15 195 / 0.6);
+
+  --color-text: oklch(92% 0.005 240);
+  --color-text-muted: oklch(65% 0.01 240);
+  --color-text-subtle: oklch(45% 0.01 240);
+
+  --color-critical: oklch(55% 0.22 25);
+  --color-critical-bg: oklch(55% 0.22 25 / 0.12);
+  --color-critical-border: oklch(55% 0.22 25 / 0.35);
+
+  --color-high: oklch(68% 0.18 45);
+  --color-high-bg: oklch(68% 0.18 45 / 0.12);
+  --color-high-border: oklch(68% 0.18 45 / 0.35);
+
+  --color-medium: oklch(78% 0.15 85);
+  --color-medium-bg: oklch(78% 0.15 85 / 0.12);
+  --color-medium-border: oklch(78% 0.15 85 / 0.35);
+
+  --color-low: oklch(68% 0.14 155);
+  --color-low-bg: oklch(68% 0.14 155 / 0.12);
+  --color-low-border: oklch(68% 0.14 155 / 0.35);
+
+  --color-success: oklch(55% 0.1 140);
+  --color-danger: var(--color-critical);
+}
+
+/* Usage notes:
+   - Import this file in `globals.css` or include in Tailwind via postcss.
+   - Avoid using pure #000 / #fff; use these tokens for contrast.
+*/
+
+/* Basic component utilities used by the scaffolded components */
+.input {
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: var(--text-base);
+  line-height: 1.45;
+  padding: 10px 12px;
+  transition:
+    background var(--duration-short) ease-out,
+    border-color var(--duration-short) ease-out,
+    box-shadow var(--duration-short) ease-out;
+}
+.input::placeholder {
+  color: var(--color-text-subtle);
+}
+.input:hover {
+  background: var(--color-bg-card);
+}
+.input:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 4px var(--color-primary-glow);
+}
+
+.input-select {
+  appearance: none;
+  cursor: pointer;
+  padding: 8px 2.25rem 8px 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+.dark .input-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground, oklch(0.985 0 0));
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  transition:
+    transform var(--duration-short) var(--ease-out-expo),
+    background var(--duration-short) ease-out,
+    filter var(--duration-short) ease-out;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.panel {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  box-shadow: 0 18px 60px oklch(12% 0.01 240 / 0.06);
+}
+
+.dark .panel {
+  box-shadow: 0 18px 60px oklch(0% 0 0 / 0.22);
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dropzone {
+  border-radius: var(--radius-md);
+  padding: 12px;
+  min-height: 96px;
+  transition:
+    border-color var(--duration-short) ease-out,
+    background var(--duration-short) ease-out;
+}
+
+/* Critical badge subtle border pulse */
+@keyframes critical-pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--color-critical-bg);
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--color-critical-bg);
+  }
+}
+.critical-pulse {
+  animation: critical-pulse 2s ease-in-out infinite;
+}
+
+.pressable {
+  transition: transform var(--duration-short) var(--ease-out-expo);
+}
+.pressable:active {
+  transform: scale(0.97);
+}
+
+/* Smooth theme transition for background, text, borders and shadows */
+html,
+body,
+.card,
+.btn-primary,
+.input,
+.dropzone {
+  transition:
+    background-color 220ms var(--ease-out-expo),
+    color 220ms var(--ease-out-expo),
+    border-color 220ms var(--ease-out-expo),
+    box-shadow 220ms var(--ease-out-expo);
+}
