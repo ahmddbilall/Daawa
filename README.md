@@ -1,12 +1,12 @@
-# Daawa (دعوی) — Offline Health Triage Assistant 🩺
+# Dawa (دوا) — Offline Health Triage Assistant 🩺
 
-![Daawa UI Preview](frontend/public/Daawa-preview.png) *(Note: Add a screenshot of the app here)*
 
-**Daawa** is a fully offline, multimodal AI triage assistant designed for community health workers in remote and resource-limited environments. 
+
+**Dawa** is a fully offline, multimodal AI triage assistant designed for community health workers in remote and resource-limited environments. 
 
 A health worker in rural Pakistan, Nigeria, or Bolivia might see 40 patients a day while the nearest doctor is hours away and internet access is nonexistent. Equipped with just a cheap laptop, a microphone, and a camera, they often have to guess between severe conditions like dengue or a simple viral rash. This happens millions of times a day.
 
-**The Solution:** Daawa runs entirely locally using lightweight AI models. A health worker can snap a photo, record an audio description of symptoms (or type them) in their native language, and instantly receive a structured clinical assessment—including urgency level, likely conditions, and immediate actions. Zero internet. Zero cloud. Zero cost after setup.
+**The Solution:** Dawa runs entirely locally using lightweight AI models. A health worker can snap a photo, record an audio description of symptoms (or type them) in their native language, and instantly receive a structured clinical assessment—including urgency level, likely conditions, and immediate actions. Zero internet. Zero cloud. Zero cost after setup.
 
 ## ✨ Key Features
 - **100% Offline AI Inference:** Powered by local Ollama (Gemma 4) to ensure absolute privacy and reliability without any internet connection.
@@ -81,10 +81,10 @@ npm run dev
 ---
 
 ## 🔒 Security & Privacy
-Daawa is designed with strict data privacy in mind. Because the models (Whisper and Gemma) run entirely on the local machine, **no patient data, images, or audio recordings ever leave the device.** There are no analytics trackers, no cloud API calls, and no external databases.
+Dawa is designed with strict data privacy in mind. Because the models (Whisper and Gemma) run entirely on the local machine, **no patient data, images, or audio recordings ever leave the device.** There are no analytics trackers, no cloud API calls, and no external databases.
 
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request to improve translations, optimize local inference times, or add support for smaller LLMs.
 
 ## 📜 Disclaimer
-**Daawa is an AI-powered assistant and can make mistakes.** It is designed to *support* community health workers, not replace professional medical diagnosis. Always consult a healthcare professional for critical emergencies.
+**Dawa is an AI-powered assistant and can make mistakes.** It is designed to *support* community health workers, not replace professional medical diagnosis. Always consult a healthcare professional for critical emergencies.
