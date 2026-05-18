@@ -1,6 +1,12 @@
 # Dawa (دوا) — Offline Health Triage Assistant 🩺
 
+<img width="1849" height="895" alt="image" src="https://github.com/user-attachments/assets/c2224b57-1e48-4361-9f21-b14daf20f7aa" />
 
+<img width="1172" height="794" alt="image" src="https://github.com/user-attachments/assets/4c1451b0-9f25-4683-842f-daf58f5aad62" />
+
+<img width="1179" height="886" alt="image" src="https://github.com/user-attachments/assets/e38317ff-75a2-42d0-8ff8-8a3c196bd818" />
+
+--- 
 
 **Dawa** is a fully offline, multimodal AI triage assistant designed for community health workers in remote and resource-limited environments. 
 
